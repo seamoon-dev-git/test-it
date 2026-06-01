@@ -1,0 +1,2060 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0B6DFF" />
+
+    <title>WOONGJIN IT | 엔터프라이즈 IT 파트너</title>
+    <meta
+      name="description"
+      content="클라우드·데이터·보안·운영 자동화까지. 비즈니스 성장을 가속하는 엔터프라이즈 IT 파트너 WOONGJIN IT."
+    />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Pretendard Korean font -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css"
+    />
+
+    <!-- Iconify Solar icons -->
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+
+    
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              "3xl": "1920px",
+              "4xl": "2560px",
+            },
+            fontFamily: {
+              sans: [
+                "Pretendard",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "Noto Sans KR",
+                "Apple SD Gothic Neo",
+                "sans-serif",
+              ],
+            },
+            colors: {
+              ink: {
+                950: "#000000",
+                900: "#0B1020",
+                800: "#111A33",
+                700: "#17244A",
+              },
+              brand: {
+                50: "#EFF6FF",
+                100: "#DCEBFF",
+                200: "#B5D6FF",
+                300: "#86BAFF",
+                400: "#4A94FF",
+                500: "#0B6DFF",
+                600: "#0958D6",
+                700: "#0744AA",
+                800: "#053680",
+                900: "#04254D",
+              },
+            },
+            boxShadow: {
+              glass: "0 20px 80px rgba(0,0,0,.35)",
+              bevel:
+                "inset 0 1px 0 rgba(255,255,255,.10), inset 0 -1px 0 rgba(0,0,0,.35), 0 18px 60px rgba(0,0,0,.40)",
+            },
+            keyframes: {
+              floaty: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              sheen: {
+                "0%": { transform: "translateX(-140%)" },
+                "100%": { transform: "translateX(140%)" },
+              },
+              rise: {
+                "0%": { opacity: 0, transform: "translateY(10px)" },
+                "100%": { opacity: 1, transform: "translateY(0px)" },
+              },
+            },
+            animation: {
+              floaty: "floaty 8s ease-in-out infinite",
+              sheen: "sheen 2.8s ease-in-out infinite",
+              rise: "rise .7s ease-out both",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="./css/site.css" />
+
+  </head>
+
+  <body
+    class="font-sans bg-black text-white selection:bg-brand-500/35 selection:text-white"
+  >
+        <svg class="sr-only" aria-hidden="true" width="0" height="0" focusable="false">
+      <defs>
+        <linearGradient id="service-icon-tone-grad" x1="22%" y1="6%" x2="78%" y2="94%">
+          <stop offset="0%" stop-color="#9ec8ff" />
+          <stop offset="46%" stop-color="#0b6dff" />
+          <stop offset="100%" stop-color="#0744aa" />
+        </linearGradient>
+        <linearGradient id="service-icon-tone-grad-soft" x1="18%" y1="0%" x2="82%" y2="100%">
+          <stop offset="0%" stop-color="#c5ddff" />
+          <stop offset="55%" stop-color="#5a9eff" />
+          <stop offset="100%" stop-color="#2a7ef0" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+<a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:left-5 focus:top-[100px] focus:z-[110] focus-ring rounded-xl bg-ink-900 px-4 py-3 text-sm"
+      >본문으로 바로가기</a
+    >
+
+    <!-- Background (히어로 최상단에서는 숨김 · 스크롤 후 표시) -->
+    <div id="page-bg-decoration" class="fixed inset-0 -z-10 is-dimmed-for-hero" aria-hidden="true">
+      <div class="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_10%,rgba(11,109,255,.25),transparent_60%),radial-gradient(900px_480px_at_80%_20%,rgba(172,212,255,.14),transparent_55%),radial-gradient(900px_600px_at_60%_90%,rgba(11,109,255,.12),transparent_55%)]"></div>
+      <div class="absolute inset-0 gridlines opacity-60"></div>
+      <div class="absolute inset-0 noise opacity-30"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-ink-950 to-ink-950"></div>
+    </div>
+
+    <!-- Top nav: fixed · 히어로에서는 투명(영상 풀블리드) · 스크롤 후 블랙 바 · site-container로 초고해상도 폭 확장 -->
+    <header id="site-header" class="site-header fixed top-0 left-0 right-0 z-[100] w-full border-b border-transparent bg-transparent" role="banner">
+      <div class="site-container flex h-[90px] w-full items-center px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12 3xl:h-[100px] 4xl:h-[108px]">
+        <div class="grid h-full min-h-0 w-full min-w-0 grid-cols-[auto_1fr_auto] items-center gap-3 md:gap-6 lg:gap-8">
+          <a
+            href="#hero"
+            class="group inline-flex h-full min-w-0 shrink-0 items-center justify-self-start ps-0 focus-ring rounded-lg"
+            aria-label="WOONGJIN IT — 메인 화면으로 이동"
+          >
+            <span
+              class="relative inline-flex h-[3.025rem] items-center sm:h-[3.3rem] 3xl:h-[3.55rem] 4xl:h-[3.85rem]"
+              aria-hidden="true"
+            >
+              <img
+                class="header-logo-img--mono relative z-[1] h-full w-auto origin-left object-contain object-left"
+                src="./assets/Logo_wj_w.svg"
+                alt="" role="presentation"
+                width="200"
+                height="104"
+                decoding="async"
+              />
+              <img
+                class="header-logo-img--color z-[2] h-full w-auto origin-left object-contain object-left"
+                src="./assets/Logo_wj.svg"
+                alt="" role="presentation"
+                width="200"
+                height="104"
+                decoding="async"
+              />
+            </span>
+          </a>
+
+          <nav
+            id="gnb-mega"
+            class="gnb-mega hidden min-w-0 justify-self-center lg:flex lg:h-full lg:min-w-0 lg:max-w-full"
+            aria-label="주 메뉴"
+          >
+            <div class="gnb-mega__sheet" aria-hidden="true"></div>
+            <ul class="gnb-mega__list lg:text-xl lg:leading-none">
+              <li class="gnb-mega__item" data-mega-item>
+                <a class="gnb-mega__trigger focus-ring" href="#services">Business</a>
+                <div class="gnb-mega__panel" role="region" aria-label="Business 하위 메뉴">
+                  <div class="gnb-mega__panel-inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+                    <div class="gnb-mega__cols gnb-mega__cols--5">
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">AI</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">AICC <span class="gnb-mega__sep">|</span> AI 고객상담 시스템</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">WIKL <span class="gnb-mega__sep">|</span> AI 인사이트 플랫폼</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">AI웅수 <span class="gnb-mega__sep">|</span> 그룹웨어 AI</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">SAP Joule</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Mendix MAIA</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">SOLUTION</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">WRMS</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">WDMS</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">GAM SOLUTION</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Business Synergy Suite</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">ERP</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">SAP S/4HANA</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">SAP Business One</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">SAP EWM</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Microsoft Dynamics 365</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Smart Factory</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">WiJARD Package</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">CLOUD ONEPACK</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">CLOUD</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">AWS (Amazon Web Services)</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Microsoft Azure</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Microsoft Power Platform</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">NAVER Cloud Platform</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Databricks</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Mendix</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">워크쓰루 &amp; 네이버웍스 코어</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">MANAGED SERVICE</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">ITO</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Global Development Center</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">컨텍센터 BPO</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">Payroll BPO</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb-mega__item" data-mega-item>
+                <a class="gnb-mega__trigger focus-ring" href="#cases">Industry</a>
+                <div class="gnb-mega__panel" role="region" aria-label="Industry 하위 메뉴">
+                  <div class="gnb-mega__panel-inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+                    <div class="gnb-mega__cols gnb-mega__cols--7">
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">렌탈</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">고객 만족도 및 충성도 증대</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">사업 확장 및 브랜드 신뢰도 증가</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">통합 관리 및 운영 효율화</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">모빌리티</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">디지털 혁신을 위한 최적의 도구</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">프로세스 정립 및 글로벌 운영 시스템 구축</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">효율적인 자원관리</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">제조</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">디지털 혁신과 생산성</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">인공지능과 머신러닝으로 제조 혁신 실현</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">계획과 목표 중심의 프로세스 설계로 품질 향상</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">바이오</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">엄격한 규제 준수를 위한 IT시스템</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">성장을 위한 기반 마련</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">소비재</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">플랫폼을 통한 경쟁력 강화</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">고객 경험 강화</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">데이터 분석과 기술의 활용</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">물류</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">복잡한 물류 현장을 위한 통합된 플랫폼</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">재고 없는 창고</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">미래 성장을 위한 유연한 물류 시스템</a></li>
+                        </ul>
+                      </div>
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">반도체</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">고도의 정밀성과 효율성을 위한 도구</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb-mega__item" data-mega-item data-mega-simple>
+                <a class="gnb-mega__trigger focus-ring" href="#media" aria-label="자료실 — 미디어 섹션으로 이동">자료실</a>
+                <div class="gnb-mega__panel" role="region" aria-label="자료실 하위 메뉴">
+                  <div class="gnb-mega__panel-inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+                    <div class="gnb-mega__panel-shift">
+                    <div class="gnb-mega__cols gnb-mega__cols--simple">
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">자료실</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">프로젝트사례</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">다운로드</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb-mega__item" data-mega-item data-mega-simple>
+                <a class="gnb-mega__trigger focus-ring" href="#media" aria-label="미디어룸 섹션으로 이동">미디어룸</a>
+                <div class="gnb-mega__panel" role="region" aria-label="미디어룸 하위 메뉴">
+                  <div class="gnb-mega__panel-inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+                    <div class="gnb-mega__panel-shift">
+                    <div class="gnb-mega__cols gnb-mega__cols--simple">
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">미디어룸</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">뉴스</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">이벤트</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">공지사항</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">블로그</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="gnb-mega__item" data-mega-item data-mega-simple>
+                <a class="gnb-mega__trigger focus-ring" href="#contact">회사소개</a>
+                <div class="gnb-mega__panel" role="region" aria-label="회사소개 하위 메뉴">
+                  <div class="gnb-mega__panel-inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+                    <div class="gnb-mega__panel-shift">
+                    <div class="gnb-mega__cols gnb-mega__cols--simple">
+                      <div class="gnb-mega__col">
+                        <h3 class="gnb-mega__h2">회사소개</h3>
+                        <ul class="gnb-mega__links">
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">기업소개</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">투자정보</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">해외법인</a></li>
+                          <li><a class="focus-ring" href="#" data-empty-link aria-disabled="true" tabindex="-1">채용정보</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="flex h-full min-w-0 shrink-0 items-center justify-end justify-self-end gap-2 md:gap-3">
+            <nav class="hidden items-center gap-5 text-sm text-white/75 md:flex md:h-full 3xl:gap-6 3xl:text-base" aria-label="보조 메뉴">
+              <a class="focus-ring inline-flex shrink-0 items-center rounded-lg px-1.5 py-1 leading-none hover:text-white" href="#" data-empty-link aria-disabled="true" tabindex="-1">문의하기</a>
+              <a class="focus-ring inline-flex shrink-0 items-center rounded-lg px-1.5 py-1 leading-none hover:text-white" href="#cases">고객사례</a>
+            </nav>
+
+            <button
+              id="header-search-button"
+              type="button"
+              class="focus-ring inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10"
+              aria-label="검색 열기"
+              aria-expanded="false"
+              aria-controls="header-search-overlay"
+            >
+              <iconify-icon icon="solar:magnifer-linear" class="header-toolbar-icon" aria-hidden="true"></iconify-icon>
+            </button>
+            <button
+              type="button"
+              class="focus-ring inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10"
+              aria-label="언어 선택 — 현재 준비 중입니다"
+            >
+              <iconify-icon icon="solar:global-linear" class="header-toolbar-icon" aria-hidden="true"></iconify-icon>
+            </button>
+
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="lg:hidden focus-ring inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              aria-label="메뉴 열기"
+            >
+              <iconify-icon icon="solar:hamburger-menu-linear" class="header-menu-icon" aria-hidden="true"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+        <!-- Mobile menu panel -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden border-t border-white/[0.06] bg-white pb-3"
+          role="navigation"
+          aria-label="모바일 주 메뉴"
+          aria-hidden="true"
+        >
+          <div class="site-container w-full px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+            <div class="mobile-menu-inner">
+              <div class="mobile-nav">
+                <div class="mobile-nav__group" data-mobile-nav-group>
+                  <button type="button" class="mobile-nav__lv1 focus-ring" data-mobile-nav-toggle id="mobile-nav-toggle-0" aria-controls="mobile-nav-panel-0" aria-expanded="false">
+                    <span class="mobile-nav__lv1-label">Business</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="mobile-nav__chevron" aria-hidden="true"></iconify-icon>
+                  </button>
+                  <div id="mobile-nav-panel-0" class="mobile-nav__panel" role="region" aria-labelledby="mobile-nav-toggle-0" hidden>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">AI</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">AICC <span class="mobile-nav__sep">|</span> AI 고객상담 시스템</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">WIKL <span class="mobile-nav__sep">|</span> AI 인사이트 플랫폼</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">AI웅수 <span class="mobile-nav__sep">|</span> 그룹웨어 AI</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">SAP Joule</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Mendix MAIA</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">SOLUTION</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">WRMS</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">WDMS</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">GAM SOLUTION</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Business Synergy Suite</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">ERP</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">SAP S/4HANA</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">SAP Business One</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">SAP EWM</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Microsoft Dynamics 365</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Smart Factory</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">WiJARD Package</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">CLOUD ONEPACK</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">CLOUD</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">AWS (Amazon Web Services)</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Microsoft Azure</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Microsoft Power Platform</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">NAVER Cloud Platform</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Databricks</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Mendix</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">워크쓰루 &amp; 네이버웍스 코어</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">MANAGED SERVICE</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">ITO</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Global Development Center</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">컨텍센터 BPO</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">Payroll BPO</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-nav__group" data-mobile-nav-group>
+                  <button type="button" class="mobile-nav__lv1 focus-ring" data-mobile-nav-toggle id="mobile-nav-toggle-1" aria-controls="mobile-nav-panel-1" aria-expanded="false">
+                    <span class="mobile-nav__lv1-label">Industry</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="mobile-nav__chevron" aria-hidden="true"></iconify-icon>
+                  </button>
+                  <div id="mobile-nav-panel-1" class="mobile-nav__panel" role="region" aria-labelledby="mobile-nav-toggle-1" hidden>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">렌탈</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">고객 만족도 및 충성도 증대</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">사업 확장 및 브랜드 신뢰도 증가</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">통합 관리 및 운영 효율화</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">모빌리티</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">디지털 혁신을 위한 최적의 도구</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">프로세스 정립 및 글로벌 운영 시스템 구축</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">효율적인 자원관리</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">제조</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">디지털 혁신과 생산성</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">인공지능과 머신러닝으로 제조 혁신 실현</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">계획과 목표 중심의 프로세스 설계로 품질 향상</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">바이오</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">엄격한 규제 준수를 위한 IT시스템</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">성장을 위한 기반 마련</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">소비재</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">플랫폼을 통한 경쟁력 강화</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">고객 경험 강화</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">데이터 분석과 기술의 활용</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">물류</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">복잡한 물류 현장을 위한 통합된 플랫폼</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">재고 없는 창고</a></li>
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">미래 성장을 위한 유연한 물류 시스템</a></li>
+                      </ul>
+                    </div>
+                    <div class="mobile-nav__section">
+                      <a class="mobile-nav__lv2 focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">반도체</a>
+                      <ul class="mobile-nav__lv3">
+                        <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">고도의 정밀성과 효율성을 위한 도구</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-nav__group" data-mobile-nav-group>
+                  <button type="button" class="mobile-nav__lv1 focus-ring" data-mobile-nav-toggle id="mobile-nav-toggle-2" aria-controls="mobile-nav-panel-2" aria-expanded="false">
+                    <span class="mobile-nav__lv1-label">자료실</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="mobile-nav__chevron" aria-hidden="true"></iconify-icon>
+                  </button>
+                  <div class="mobile-nav__panel mobile-nav__panel--flat" hidden>
+                    <ul class="mobile-nav__lv3">
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">프로젝트사례</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">다운로드</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mobile-nav__group" data-mobile-nav-group>
+                  <button type="button" class="mobile-nav__lv1 focus-ring" data-mobile-nav-toggle id="mobile-nav-toggle-3" aria-controls="mobile-nav-panel-3" aria-expanded="false">
+                    <span class="mobile-nav__lv1-label">미디어룸</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="mobile-nav__chevron" aria-hidden="true"></iconify-icon>
+                  </button>
+                  <div class="mobile-nav__panel mobile-nav__panel--flat" hidden>
+                    <ul class="mobile-nav__lv3">
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">뉴스</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">이벤트</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">공지사항</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">블로그</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mobile-nav__group" data-mobile-nav-group>
+                  <button type="button" class="mobile-nav__lv1 focus-ring" data-mobile-nav-toggle id="mobile-nav-toggle-4" aria-controls="mobile-nav-panel-4" aria-expanded="false">
+                    <span class="mobile-nav__lv1-label">회사소개</span>
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="mobile-nav__chevron" aria-hidden="true"></iconify-icon>
+                  </button>
+                  <div class="mobile-nav__panel mobile-nav__panel--flat" hidden>
+                    <ul class="mobile-nav__lv3">
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">기업소개</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">투자정보</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">해외법인</a></li>
+                      <li><a class="focus-ring" href="#" data-empty-link data-mobile-menu-link aria-disabled="true" tabindex="-1">채용정보</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- 검색 풀오버 -->
+    <div
+      id="header-search-overlay"
+      class="header-search-overlay"
+      hidden
+      aria-hidden="true"
+    >
+      <div
+        class="header-search-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="header-search-lead"
+      >
+        <div class="header-search-overlay__inner site-container px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12">
+          <p id="header-search-lead" class="header-search__lead">
+            가치 있는 미래를 만들어갈 혁신의 비즈니스를 찾아보세요.
+          </p>
+          <form class="header-search__form" role="search" action="#" method="get">
+            <label class="sr-only" for="header-search-input">검색어</label>
+            <div class="header-search__field">
+              <input
+                id="header-search-input"
+                class="header-search__input"
+                type="search"
+                name="q"
+                placeholder="검색어를 입력해주세요"
+                autocomplete="off"
+                enterkeyhint="search"
+              />
+              <button type="submit" class="header-search__submit focus-ring" aria-label="검색">
+                <iconify-icon icon="solar:magnifer-linear" aria-hidden="true"></iconify-icon>
+              </button>
+            </div>
+          </form>
+          <div class="header-search__suggest">
+            <span class="header-search__suggest-label">추천 검색어</span>
+            <div class="header-search__tags" role="list">
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#클라우드전환" data-empty-link aria-disabled="true" tabindex="-1">#클라우드전환</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#데이터AI" data-empty-link aria-disabled="true" tabindex="-1">#데이터AI</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#디지털AX" data-empty-link aria-disabled="true" tabindex="-1">#디지털AX</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#엔터프라이즈보안" data-empty-link aria-disabled="true" tabindex="-1">#엔터프라이즈보안</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#IT아웃소싱" data-empty-link aria-disabled="true" tabindex="-1">#IT아웃소싱</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#스마트제조" data-empty-link aria-disabled="true" tabindex="-1">#스마트제조</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#인프라운영" data-empty-link aria-disabled="true" tabindex="-1">#인프라운영</a>
+              <a href="#" class="header-search__tag focus-ring" role="listitem" data-search-suggest="#AI솔루션" data-empty-link aria-disabled="true" tabindex="-1">#AI솔루션</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 퀵메뉴 (우측 중앙 고정 · 도트 연결선 + 맨 위로) -->
+    <nav
+      id="section-quick-nav"
+      class="pointer-events-none fixed right-3 top-1/2 z-[90] hidden -translate-y-1/2 md:pointer-events-auto md:block"
+      aria-label="섹션 바로가기"
+    >
+      <div class="flex flex-col items-end gap-5">
+        <div class="relative">
+          <!-- 6개 도트를 관통하는 세로 트랙 (1px 화이트) -->
+          <span
+            class="sq-nav-line pointer-events-none absolute right-[4px] top-2 bottom-2 z-0 w-px"
+            aria-hidden="true"
+          ></span>
+          <ul class="relative z-[1] flex flex-col gap-3">
+            <li>
+              <a
+                href="#hero"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="hero"
+              >
+                <span class="sq-label max-w-[4.25rem] text-right leading-snug">메인</span>
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="services"
+              >
+                <span class="sq-label max-w-[4.25rem] text-right leading-snug">서비스</span>
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#media"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="media"
+              >
+                <span class="sq-label max-w-[4.25rem] text-right leading-snug">미디어룸</span>
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#cases"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="cases"
+              >
+                <span class="sq-label max-w-[4.25rem] text-right leading-snug">고객사례</span>
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#growth"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="growth"
+              >
+                <span class="sq-label max-w-[5.75rem] text-right text-[9px] font-medium leading-tight tracking-[0.04em] sm:text-[10px] 3xl:text-[11px] 4xl:text-xs"
+                  >성장보고서</span
+                >
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="sq-nav-link focus-ring flex items-center justify-end gap-2.5 py-0.5 pl-2"
+                data-sq-section="contact-footer"
+                aria-label="문의하기 섹션으로 이동"
+              >
+                <span class="sq-label max-w-[4.25rem] text-right leading-snug">문의</span>
+                <span class="sq-dot relative z-[2] h-2 w-2 shrink-0 rounded-full border border-white/35" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sq-nav-scroll-actions flex flex-col items-end">
+          <button
+            type="button"
+            id="section-quick-nav-up"
+            class="sq-nav-scroll focus-ring inline-flex items-center justify-center rounded-full"
+            aria-label="페이지 최상단으로 이동"
+          >
+            <span
+              class="inline-grid size-[42px] place-items-center rounded-full border border-white/20 bg-white/5"
+              aria-hidden="true"
+            >
+              <iconify-icon
+                icon="solar:alt-arrow-up-linear"
+                style="font-size: 24px"
+                aria-hidden="true"
+              ></iconify-icon>
+            </span>
+          </button>
+          <button
+            type="button"
+            id="section-quick-nav-down"
+            class="sq-nav-scroll focus-ring inline-flex items-center justify-center rounded-full"
+            aria-label="다음 섹션으로 이동"
+          >
+            <span
+              class="inline-grid size-[42px] place-items-center rounded-full border border-white/20 bg-white/5"
+              aria-hidden="true"
+            >
+              <iconify-icon
+                icon="solar:alt-arrow-down-linear"
+                style="font-size: 24px"
+                aria-hidden="true"
+              ></iconify-icon>
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="relative">
+      <!-- Hero -->
+      <section id="hero" class="snap-section relative flex min-h-[100dvh] flex-col overflow-hidden">
+        <!-- Hero video: 뷰포트 최상단~전체(고정 GNB 뒤까지 풀) -->
+        <div class="hero-media pointer-events-none absolute inset-0 -z-10 min-h-[100dvh] w-full" aria-hidden="true">
+          <div class="hero-video-stack">
+            <video
+              id="hero-video-1"
+              class="hero-video-layer hero-video-layer--crop-offset is-active h-full min-h-[100dvh] w-full object-cover opacity-55"
+              data-hero-video="0"
+              muted
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            >
+              <source src="./assets/hero.webm" type="video/webm" />
+            </video>
+            <video
+              id="hero-video-2"
+              class="hero-video-layer h-full min-h-[100dvh] w-full object-cover opacity-55"
+              data-hero-video="1"
+              muted
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            >
+              <source src="./assets/heor2.webm" type="video/webm" />
+            </video>
+            <video
+              id="hero-video-3"
+              class="hero-video-layer h-full min-h-[100dvh] w-full object-cover opacity-55"
+              data-hero-video="2"
+              muted
+              playsinline
+              preload="auto"
+              aria-hidden="true"
+            >
+              <source src="./assets/hero3.webm" type="video/webm" />
+            </video>
+          </div>
+          <div
+            class="hero-media-radial pointer-events-none absolute inset-0 bg-[radial-gradient(900px_520px_at_20%_10%,rgba(11,109,255,.22),transparent_60%),radial-gradient(800px_520px_at_80%_20%,rgba(172,212,255,.12),transparent_55%)]"
+            aria-hidden="true"
+          ></div>
+          <!-- 상단 블랙은 포인트 레이어 위에 두어 GNB 구간 유지 -->
+          <div class="hero-overlay-top-gradient" aria-hidden="true"></div>
+        </div>
+
+        <!-- 카피: 고정 헤더 높이만큼 상단 패딩 후 세로 중앙 -->
+        <div
+          class="relative z-10 site-container flex min-h-[100dvh] w-full flex-col justify-center px-4 pb-10 pt-[calc(var(--nav-height)+1rem)] sm:px-6 sm:pb-12 lg:px-8 xl:px-10 3xl:px-12 -translate-y-5"
+        >
+          <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div class="lg:col-span-12">
+              <div class="mx-auto max-w-3xl text-center xl:max-w-4xl 3xl:max-w-5xl 4xl:max-w-6xl">
+              <div id="hero-copy" class="hero-copy">
+              <h1
+                class="hero-main-headline mt-0 flex flex-col items-center gap-[9px] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 3xl:text-[4rem] 4xl:text-[5.4rem] font-semibold tracking-tight 3xl:tracking-[-0.02em] 4xl:tracking-[-0.018em] leading-[calc(1em+8px)] xl:leading-[calc(1em+9px)] 3xl:leading-[1.05] 4xl:leading-[1.055] 3xl:gap-2 4xl:gap-2.5"
+                id="hero-headline"
+              >
+                <span class="hero-title-line block w-full">
+                  <span class="hero-title-line__in block font-bold 3xl:whitespace-nowrap">클라우드에서 AI까지</span>
+                </span>
+                <span class="hero-title-line hero-title-line--delay block w-full">
+                  <span
+                    class="hero-title-line__in block font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-100 via-brand-400 to-white 3xl:whitespace-nowrap"
+                    >기업의 내일을 설계하다</span
+                  >
+                </span>
+              </h1>
+
+              <p
+                id="hero-subline"
+                class="hero-copy-desc mt-5 max-w-2xl mx-auto text-base sm:text-lg xl:text-xl 3xl:text-2xl 4xl:text-[2.1rem] 4xl:leading-relaxed font-light leading-snug text-white xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl 4xl:mt-8"
+              >
+                <span class="hero-subline-oneline">클라우드 전환 · 데이터/AI 플랫폼 · 보안 강화 · 운영 자동화까지</span>
+                <span class="hero-subline-twoline"
+                  >클라우드 전환 · 데이터/AI 플랫폼 ·<br />보안 강화 · 운영 자동화까지</span
+                >
+              </p>
+
+              <div
+                id="hero-cta-row"
+                class="hero-cta-row mt-7 flex flex-col sm:flex-row gap-3 justify-center 3xl:mt-9 3xl:gap-4 4xl:mt-14 4xl:gap-5"
+              >
+                <a
+                  href="#services"
+                  class="hero-cta-primary focus-ring inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-sm font-semibold bg-white text-ink-950 hover:bg-white/90 3xl:px-8 3xl:py-4 3xl:text-base 4xl:px-10 4xl:py-[18px] 4xl:text-[1.375rem] 4xl:gap-2.5"
+                >
+                  핵심 서비스 보기
+                </a>
+                <a
+                  href="#cases"
+                  class="hero-cta-cases focus-ring inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-sm font-semibold bg-white/6 hover:bg-white/10 border border-white/10 3xl:px-8 3xl:py-4 3xl:text-base 4xl:px-10 4xl:py-[18px] 4xl:text-[1.375rem] 4xl:gap-2.5"
+                >
+                  고객성공사례
+                </a>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav
+          id="hero-video-nav"
+          class="hero-video-nav"
+          aria-label="히어로 배너 진행"
+        >
+          <div
+            class="hero-video-nav__segments"
+            id="hero-video-nav-segments"
+            role="tablist"
+          ></div>
+        </nav>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="snap-section relative flex min-h-[100dvh] flex-col bg-white text-black">
+        <div
+          class="relative z-10 flex w-full flex-1 flex-col justify-start snap-section-main pb-6 sm:pb-8"
+        >
+        <div class="site-container w-full px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12 -translate-y-2 4xl:-translate-y-5">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 4xl:gap-6">
+            <div class="max-w-3xl srvc-reveal xl:max-w-4xl 3xl:max-w-5xl" data-services-reveal="text">
+              <div class="text-xs font-semibold tracking-wider text-black/60 3xl:text-sm">SERVICES</div>
+              <h2 class="mt-3 tracking-tight">
+                <span class="services-title-narrow flex flex-col gap-[9px] min-[720px]:hidden">
+                  <span class="hero-title-line block w-full">
+                    <span class="hero-title-line__in block type-section-display text-black"
+                      >내일의 경쟁력을</span
+                    >
+                  </span>
+                  <span class="hero-title-line hero-title-line--delay block w-full">
+                    <span class="hero-title-line__in block type-section-display text-black"
+                      >만드는 기술</span
+                    >
+                  </span>
+                </span>
+                <span class="services-title-wide hidden min-[720px]:block">
+                  <span class="hero-title-line block w-full">
+                    <span class="hero-title-line__in block type-section-display text-black"
+                      >내일의 경쟁력을 만드는 기술</span
+                    >
+                  </span>
+                </span>
+              </h2>
+              <div class="mt-3 text-black/60 3xl:mt-4 3xl:text-lg 3xl:leading-relaxed">
+                <p class="mt-0 text-inherit 3xl:text-lg 3xl:leading-relaxed">
+                  <span class="services-subline-long max-[719px]:hidden"
+                    >컨설팅부터 시스템 구축, 운영까지 기업 경영 전반의 Total 컨설팅합니다.</span
+                  ><span class="services-subline-short hidden max-[719px]:block"
+                    >컨설팅부터 시스템 구축, 운영까지<br />기업 경영 전반의 Total 컨설팅합니다.</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <a
+                href="#"
+                data-empty-link
+                class="srvc-reveal focus-ring inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold bg-black text-white hover:bg-black/90 3xl:px-6 3xl:py-3.5 3xl:text-base 4xl:px-10 4xl:py-4 4xl:text-xl"
+                data-services-reveal="cta"
+                aria-disabled="true" tabindex="-1"
+                >웅진의 핵심서비스 자세히보기</a
+              >
+            </div>
+          </div>
+
+          <div class="services-card-grid mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3 xl:gap-5 3xl:gap-6 4xl:mt-[2.4rem] 4xl:gap-7">
+            <!-- Card 1 -->
+            <article
+              id="CARD_AI"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">AI</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">AI 서비스 솔루션</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">데이터에서 인사이트까지</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:cpu-bolt-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">AI</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">AI 서비스 솔루션</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">데이터에서 인사이트까지</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>AICC</li>
+                  <li>WIKL</li>
+                  <li>AI웅수</li>
+                  <li>SAP Joule</li>
+                  <li>Mendix MAIA</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              id="CARD_SOLUTION"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">SOLUTION</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">Solution</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">비즈니스를 혁신하는 IT 솔루션</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:widget-2-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">SOLUTION</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">Solution</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">비즈니스를 혁신하는 IT 솔루션</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>WRMS</li>
+                  <li>WDMS</li>
+                  <li>GMA SOLUTION</li>
+                  <li>BUSINESS Synergy Suite</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              id="CARD_ERP"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">ERP</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">SAP ERP</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">기업 성장을 이끄는 차세대 ERP</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:buildings-3-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">ERP</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">SAP ERP</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">기업 성장을 이끄는 차세대 ERP</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>SAP S/4HANA</li>
+                  <li>SAP Business One</li>
+                  <li>SAP EWM</li>
+                  <li>Microsoft Dynamics 365</li>
+                  <li>Smart Factory</li>
+                  <li>WiJARD Package</li>
+                  <li>CLOUD ONEPACK</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article
+              id="CARD_CLOUD"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">CLOUD</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">Cloud</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">안정성과 확장성을 갖춘 클라우드 서비스</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:cloud-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">CLOUD</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">Cloud</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">안정성과 확장성을 갖춘 클라우드 서비스</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>AWS</li>
+                  <li>Microsoft Azure</li>
+                  <li>Power Platform</li>
+                  <li>NAVER Cloud Platform</li>
+                  <li>Databricks</li>
+                  <li>Mendix</li>
+                  <li>워크쓰루&amp;네이버웍스 코어</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article
+              id="CARD_MANAGED"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">MANAGED</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">Managed</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">고객접점을 관리하는 통합서비스</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:headphones-round-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">MANAGED</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">Managed</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">고객접점을 관리하는 통합서비스</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>IT Outsourcing</li>
+                  <li>GDC</li>
+                  <li>컨택센터 BOR</li>
+                  <li>Payroll BPO</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article
+              id="CARD_GLOBAL"
+              class="service-card srvc-reveal group relative flex min-h-0 w-full flex-col overflow-hidden rounded-[28px] xl:rounded-[30px] min-[1921px]:rounded-[32px] bg-white shadow-[0_18px_56px_rgba(15,23,42,.075)] 4xl:aspect-[5/4]"
+            >
+              <div class="service-card-hover" aria-hidden="true">
+                <div class="service-card-hover__bg"></div>
+                <div class="service-card-hover__overlay"></div>
+                <div class="service-card-hover__copy">
+                  <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider 4xl:text-2xl 4xl:tracking-[0.12em]">GLOBAL</div>
+                  <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug">Global</div>
+                  <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug">세계 시장을 향한 글로벌 비즈니스</div>
+                </div>
+              </div>
+              <div
+                class="service-card-default-glow pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-brand-500/[0.07] blur-3xl"
+                aria-hidden="true"
+              ></div>
+              <div class="service-card-icon-wrap pointer-events-none absolute" aria-hidden="true">
+                <iconify-icon icon="solar:earth-bold-duotone" class="service-card-icon"></iconify-icon>
+              </div>
+              <div class="service-card-body relative flex min-h-0 flex-1 flex-col pb-7 sm:pb-8 xl:pb-10 min-[1921px]:pb-10 4xl:pb-9">
+                <div class="service-card-category text-xs 3xl:text-sm font-semibold uppercase tracking-wider text-black/35 4xl:text-2xl 4xl:tracking-[0.12em] 4xl:text-black/38">GLOBAL</div>
+                <div class="service-card-title mt-3 text-3xl min-[1921px]:text-4xl 4xl:mt-2 4xl:text-[2.4375rem] 4xl:leading-[1.08] font-semibold tracking-tight 4xl:tracking-wide leading-snug text-black">Global</div>
+                <div class="service-card-subtitle mt-2 text-[0.9625rem] min-[1921px]:text-[1.1rem] 4xl:mt-1 4xl:text-[1.7875rem] 4xl:leading-snug text-black/58">세계 시장을 향한 글로벌 비즈니스</div>
+                <ul class="service-card-keywords mt-5 min-w-0 text-[1.05rem] min-[1921px]:text-[1.2rem] text-black/48 leading-[1.62] lg:mt-6 min-[1921px]:mt-7 4xl:mt-3">
+                  <li>미국법인</li>
+                  <li>말레이시아법인</li>
+                  <li>글로벌개발센터 GDC</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Media room -->
+      <section id="media" class="snap-section relative flex min-h-[100dvh] flex-col overflow-hidden bg-black" data-reveal-seq data-reveal-seq-base="70" data-reveal-seq-step="140">
+        <div class="media-bg" aria-hidden="true">
+          <video
+            id="media-bg-video"
+            class="block"
+            muted
+            playsinline
+            loop
+            preload="auto"
+            poster="./assets/미디어룸1.png"
+            aria-hidden="true"
+          >
+            <source src="./assets/MEDIA.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-[radial-gradient(900px_520px_at_20%_10%,rgba(11,109,255,.10),transparent_60%),radial-gradient(900px_520px_at_80%_30%,rgba(172,212,255,.06),transparent_60%)]"></div>
+          <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <!-- 풀뷰에서 제목+카드 묶음을 세로 중앙에 두고, 다른 섹션과 동일한 상향 보정(-translate-y-5) -->
+        <div
+          class="relative z-10 flex min-h-0 w-full flex-1 flex-col justify-center py-6 sm:py-8"
+        >
+        <div class="site-container w-full px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12 -translate-y-5">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div class="max-w-2xl xl:max-w-3xl 3xl:max-w-4xl">
+              <div class="reveal-up">
+                <div class="text-xs font-semibold tracking-wider text-brand-200/90 3xl:text-sm">MEDIA ROOM</div>
+              </div>
+              <div class="reveal-up mt-3">
+                <h2 class="tracking-tight">
+                  <span class="hero-title-line block w-full">
+                    <span class="hero-title-line__in block type-section-display text-white">미디어룸</span>
+                  </span>
+                </h2>
+              </div>
+              <div class="reveal-up mt-3 text-white/65 3xl:mt-4 3xl:text-lg 3xl:leading-relaxed">
+                <p class="mt-0 text-inherit 3xl:text-lg 3xl:leading-relaxed">
+                  웅진이 그리는 비즈니스의 오늘과 내일, 최신 IT 트렌드와 인사이트를 가장 먼저 만나보세요
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-sm reveal-up 3xl:gap-3 3xl:text-base">
+              <a
+                href="#"
+                data-empty-link
+                class="focus-ring inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold bg-white/6 hover:bg-white/10 border border-white/10 3xl:px-6 3xl:py-3.5 3xl:text-base 4xl:px-10 4xl:py-4 4xl:text-xl"
+                aria-disabled="true" tabindex="-1"
+                >전체보기</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="media-room-grid mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3 xl:gap-6 3xl:gap-7"
+            data-reveal-stagger
+            data-reveal-stagger-base="0"
+            data-reveal-stagger-step="220"
+          >
+            <a
+              class="media-room-card reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="뉴스: 웅진 2026 월드IT쇼 참가 보도"
+            >
+              <div class="media-thumb-wrap relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                  src="./assets/미디어룸1.png"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  웅진, '2026 월드IT쇼' 참가…차세대 업무통합 운영 솔루션 선봬
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.04.20</div>
+              </div>
+            </a>
+
+            <a
+              class="media-room-card reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="뉴스: CES 2026 웅진 교육·렌탈·모빌리티 보도"
+            >
+              <div class="media-thumb-wrap media-thumb-wrap--pad-col-center relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                  src="./assets/미디어룸2.png"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  웅진, CES 2026서 ‘교육·렌탈·모빌리티’ 선봬…“글로벌 확장 가능성 알린다”
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.01.06</div>
+              </div>
+            </a>
+
+            <a
+              class="media-room-card reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="뉴스: 웅진, AWS와 사내 해커톤 진행…전사 AI 활용 역량 키운다"
+            >
+              <div class="media-thumb-wrap media-thumb-wrap--fill relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="media-thumb-img--fill transition-transform duration-500 ease-out"
+                  src="./assets/미디어룸3.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  웅진, AWS와 사내 해커톤 진행…전사 AI 활용 역량 키운다
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.02.26</div>
+              </div>
+            </a>
+
+            <a
+              class="media-room-card media-room-card--pad-row2 reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="이벤트: 웅진 IT 인사이트 데이"
+            >
+              <div class="media-thumb-wrap relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                  src="./assets/미디어룸6.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  웅진 IT, AI·클라우드 인사이트 데이 개최
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.03.12</div>
+              </div>
+            </a>
+
+            <a
+              class="media-room-card media-room-card--pad-row2 reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="공지: 웅진 IT 고객 포털 오픈"
+            >
+              <div class="media-thumb-wrap media-thumb-wrap--pad-col-center relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                  src="./assets/미디어룸5.png"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  웅진 IT 고객 포털 정식 오픈 안내
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.03.05</div>
+              </div>
+            </a>
+
+            <a
+              class="media-room-card media-room-card--pad-row2 reveal-up group relative flex flex-col overflow-hidden rounded-3xl focus-ring outline-none"
+              href="#"
+              data-empty-link
+              aria-disabled="true" tabindex="-1"
+              aria-label="블로그: 엔터프라이즈 AI 도입 가이드"
+            >
+              <div class="media-thumb-wrap relative aspect-[16/10] w-full min-h-[10rem] shrink-0 overflow-hidden bg-neutral-200">
+                <img
+                  class="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                  src="./assets/미디어룸7.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/15 via-black/20 to-black/70"></div>
+              </div>
+              <div class="flex flex-1 flex-col px-6 py-[2.75rem] sm:px-7 sm:py-[3rem] 3xl:px-8 3xl:py-[3.25rem]">
+                <div
+                  class="media-card-title media-card-title--room text-base font-semibold leading-snug 4xl:leading-[1.46] text-[#111A33] sm:text-[1.2rem] xl:text-2xl 3xl:text-[1.8rem] 4xl:text-[2rem]"
+                >
+                  엔터프라이즈 AI 도입, 어디서부터 시작할까
+                </div>
+                <div class="mt-3 text-[13px] 3xl:text-sm text-[#111A33]/55">2026.02.18</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Customer cases -->
+      <section id="cases" class="snap-section relative flex min-h-[100dvh] flex-col overflow-x-clip bg-white text-black" data-reveal-seq data-reveal-seq-base="80" data-reveal-seq-step="150">
+        <div class="relative flex w-full flex-1 flex-col justify-start snap-section-main">
+        <div class="relative z-[2] site-container w-full px-4 pb-10 sm:px-6 sm:pb-12 lg:px-8 xl:px-10 3xl:px-12">
+          <div class="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div class="max-w-2xl xl:max-w-3xl 3xl:max-w-4xl">
+              <div class="reveal-up">
+                <div class="text-xs font-semibold tracking-wider text-black/60 3xl:text-sm">Success Stories</div>
+              </div>
+              <div class="reveal-up mt-3">
+                <h2 class="tracking-tight">
+                  <span class="hero-title-line block w-full">
+                    <span class="hero-title-line__in block type-section-display text-black">고객성공사례</span>
+                  </span>
+                </h2>
+              </div>
+              <div class="reveal-up mt-3 text-black/60 3xl:mt-4 3xl:text-lg 3xl:leading-relaxed">
+                <p class="mt-0 text-inherit 3xl:text-lg 3xl:leading-relaxed">
+                  <span class="cases-subline-long max-[719px]:hidden">데이터가 성과가 되는 순간, 숫자로 증명된 비즈니스 ROI 혁신 사례</span><span class="cases-subline-short hidden max-[719px]:inline">데이터가 성과가 되는순간, 비즈니스 혁신사례</span>
+                </p>
+              </div>
+              <div class="reveal-up mt-5">
+              <div class="case-tags">
+                <a class="case-tag focus-ring" href="#cases">#렌탈</a>
+                <a class="case-tag focus-ring" href="#cases">#모빌리티</a>
+                <a class="case-tag focus-ring" href="#cases">#제조</a>
+                <a class="case-tag focus-ring" href="#cases">#바이오</a>
+                <a class="case-tag focus-ring" href="#cases">#소비재</a>
+                <a class="case-tag focus-ring" href="#cases">#물류</a>
+                <a class="case-tag focus-ring" href="#cases">#반도체</a>
+              </div>
+              </div>
+            </div>
+            <div class="flex gap-2 reveal-up 3xl:gap-3">
+              <a
+                id="cases-view-all-btn"
+                href="#cases"
+                class="focus-ring inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold bg-black text-white hover:bg-black/90 3xl:px-6 3xl:py-3.5 3xl:text-base 4xl:px-10 4xl:py-4 4xl:text-xl"
+                >전체보기</a
+              >
+            </div>
+            </div>
+        </div>
+          <!-- 풀블리드 가로 마퀴: 좌우 화면 끝까지 확장 · 가장자리 페이드 -->
+          <div class="case-rail case-rail-bleed reveal-up relative z-[3] mt-2.5 overflow-hidden bg-white pt-2 pb-7 sm:mt-3 sm:pt-2.5 sm:pb-9 md:mt-3.5 md:pt-3 lg:mt-4">
+            <div class="case-rail-edge" aria-hidden="true"></div>
+            <div id="case-track" class="case-track" aria-label="고객 사례 카드 목록(자동 스크롤)"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Growth report -->
+      <section id="growth" class="snap-section relative flex min-h-[100dvh] flex-col overflow-hidden bg-black text-white" data-reveal-seq data-reveal-seq-base="80" data-reveal-seq-step="160">
+        <!-- z-0: (-z-10은 섹션 bg-black 아래로 깔려 영상이 안 보일 수 있음) -->
+        <div class="pointer-events-none absolute inset-0 z-0 min-h-[100dvh] w-full" aria-hidden="true">
+          <video
+            id="growth-video"
+            class="absolute block h-full min-h-[100dvh] w-full object-cover"
+            muted
+            playsinline
+            preload="auto"
+            aria-hidden="true"
+          >
+            <!-- 둘 중 존재하는 파일명으로 재생 (대소문자/철자 차이 대비) -->
+            <source src="./assets/MEDIA2.MP4" type="video/mp4" />
+            <source src="./assets/MEADIA2.MP4" type="video/mp4" />
+          </video>
+          <div class="growth-bg-vignette absolute inset-0" aria-hidden="true"></div>
+        </div>
+
+        <div
+          class="relative z-10 flex w-full flex-1 flex-col justify-center snap-section-main pb-6 sm:pb-8"
+        >
+          <div class="site-container w-full px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12 -translate-y-5">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div class="max-w-2xl xl:max-w-3xl 3xl:max-w-4xl">
+                <div class="reveal-up">
+                  <div class="text-xs font-semibold tracking-wider text-brand-200/90 3xl:text-sm">GROWTH REPORT</div>
+                </div>
+                <div class="reveal-up mt-3">
+                  <h2 class="tracking-tight">
+                    <span class="hero-title-line block w-full">
+                      <span class="hero-title-line__in block type-section-display text-white">고객과 함께 만든 성장</span>
+                    </span>
+                  </h2>
+                </div>
+                <div class="reveal-up mt-3 text-white/65 3xl:mt-4 3xl:text-lg 3xl:leading-relaxed">
+                  <p class="mt-0 text-inherit 3xl:text-lg 3xl:leading-relaxed">웅진 IT, 고객의 성장과 함께합니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 카드: 아이콘·라벨·수치를 한 덩어리로 세로 중앙 정렬 -->
+            <div
+              class="growth-card-grid growth-card-grid--4up mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+              data-reveal-stagger
+              data-reveal-stagger-base="0"
+              data-reveal-stagger-step="520"
+              data-reveal-stagger-step-m="300"
+            >
+              <article
+                class="growth-card reveal-up flex aspect-square w-full min-h-0 flex-col overflow-hidden rounded-3xl"
+              >
+                <div
+                  class="growth-card-stack relative flex h-full min-h-0 w-full flex-1 flex-col items-center justify-center text-center"
+                >
+                  <div class="growth-card-ribbon flex max-w-full flex-col items-center justify-center">
+                    <div class="growth-icon shrink-0" aria-hidden="true">
+                      <img
+                        class="growth-icon-img mx-auto"
+                        src="./assets/자산%201.svg"
+                        width="96"
+                        height="96"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="growth-card-body flex min-w-0 flex-col items-center">
+                      <div
+                        class="growth-card-title font-semibold uppercase leading-[1.12] tracking-[-0.04em] text-brand-600"
+                      >
+                        매출달성
+                      </div>
+                      <div class="growth-metric-num font-gmarket font-medium leading-none text-[#111A33]">
+                        <span data-growth-count="1400" data-growth-format="won">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="growth-card reveal-up flex aspect-square w-full min-h-0 flex-col overflow-hidden rounded-3xl"
+              >
+                <div
+                  class="growth-card-stack relative flex h-full min-h-0 w-full flex-1 flex-col items-center justify-center text-center"
+                >
+                  <div class="growth-card-ribbon flex max-w-full flex-col items-center justify-center">
+                    <div class="growth-icon shrink-0" aria-hidden="true">
+                      <img
+                        class="growth-icon-img mx-auto"
+                        src="./assets/자산3.svg"
+                        width="96"
+                        height="96"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="growth-card-body flex min-w-0 flex-col items-center">
+                      <div
+                        class="growth-card-title font-semibold uppercase leading-[1.12] tracking-[-0.04em] text-brand-600"
+                      >
+                        누적고객사
+                      </div>
+                      <div class="growth-metric-num font-gmarket font-medium leading-none text-[#111A33]">
+                        <span data-growth-count="5800" data-growth-format="company">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="growth-card reveal-up flex aspect-square w-full min-h-0 flex-col overflow-hidden rounded-3xl"
+              >
+                <div
+                  class="growth-card-stack relative flex h-full min-h-0 w-full flex-1 flex-col items-center justify-center text-center"
+                >
+                  <div class="growth-card-ribbon flex max-w-full flex-col items-center justify-center">
+                    <div class="growth-icon shrink-0" aria-hidden="true">
+                      <img
+                        class="growth-icon-img mx-auto"
+                        src="./assets/자산%202.svg"
+                        width="96"
+                        height="96"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="growth-card-body flex min-w-0 flex-col items-center">
+                      <div
+                        class="growth-card-title font-semibold uppercase leading-[1.12] tracking-[-0.04em] text-brand-600"
+                      >
+                        영업이익성장률
+                      </div>
+                      <div class="growth-metric-num font-gmarket font-medium leading-none text-[#111A33]">
+                        <span data-growth-count="67" data-growth-format="percent">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="growth-card reveal-up flex aspect-square w-full min-h-0 flex-col overflow-hidden rounded-3xl"
+              >
+                <div
+                  class="growth-card-stack relative flex h-full min-h-0 w-full flex-1 flex-col items-center justify-center text-center"
+                >
+                  <div class="growth-card-ribbon flex max-w-full flex-col items-center justify-center">
+                    <div class="growth-icon shrink-0" aria-hidden="true">
+                      <img
+                        class="growth-icon-img mx-auto"
+                        src="./assets/자산4.svg"
+                        width="96"
+                        height="96"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="growth-card-body flex min-w-0 flex-col items-center">
+                      <div
+                        class="growth-card-title font-semibold uppercase leading-[1.12] tracking-[-0.04em] text-brand-600"
+                      >
+                        Since
+                      </div>
+                      <div class="growth-metric-num font-gmarket font-medium leading-none text-[#111A33]">
+                        <span data-growth-count="22" data-growth-format="years">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="growth-history reveal-up" aria-labelledby="growth-history-title">
+              <div class="growth-history__head">
+                <p id="growth-history-title" class="growth-history__subtitle">
+                  Woongjin's History
+                </p>
+              </div>
+              <nav class="growth-history__list" aria-label="웅진 IT 연혁">
+                <a href="#" class="growth-history__row focus-ring" data-empty-link aria-disabled="true" tabindex="-1">
+                  <span class="growth-history__period">2023 ~ 현재</span>
+                  <span class="growth-history__label">새로운 혁신과 성장</span>
+                  <span class="growth-history__arrow" aria-hidden="true"
+                    ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        d="M7.5 4.5L12.5 10L7.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" /></svg
+                  ></span>
+                </a>
+                <a href="#" class="growth-history__row focus-ring" data-empty-link aria-disabled="true" tabindex="-1">
+                  <span class="growth-history__period">2018 ~ 2022</span>
+                  <span class="growth-history__label">솔루션 사업 시작</span>
+                  <span class="growth-history__arrow" aria-hidden="true"
+                    ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        d="M7.5 4.5L12.5 10L7.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" /></svg
+                  ></span>
+                </a>
+                <a href="#" class="growth-history__row focus-ring" data-empty-link aria-disabled="true" tabindex="-1">
+                  <span class="growth-history__period">2014 ~ 2017</span>
+                  <span class="growth-history__label">디지털 전환과 클라우드</span>
+                  <span class="growth-history__arrow" aria-hidden="true"
+                    ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        d="M7.5 4.5L12.5 10L7.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" /></svg
+                  ></span>
+                </a>
+                <a href="#" class="growth-history__row focus-ring" data-empty-link aria-disabled="true" tabindex="-1">
+                  <span class="growth-history__period">2008 ~ 2013</span>
+                  <span class="growth-history__label">대외 사업 진출</span>
+                  <span class="growth-history__arrow" aria-hidden="true"
+                    ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        d="M7.5 4.5L12.5 10L7.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" /></svg
+                  ></span>
+                </a>
+                <a href="#" class="growth-history__row focus-ring" data-empty-link aria-disabled="true" tabindex="-1">
+                  <span class="growth-history__period">2003 ~ 2007</span>
+                  <span class="growth-history__label">IT전문 기업 초석 마련</span>
+                  <span class="growth-history__arrow" aria-hidden="true"
+                    ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        d="M7.5 4.5L12.5 10L7.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" /></svg
+                  ></span>
+                </a>
+              </nav>
+            </div>
+            <div class="growth-section-bottom-fill" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-footer" class="snap-section relative flex min-h-[100dvh] flex-col overflow-hidden bg-black" aria-label="문의 및 사이트 정보">
+        <div class="pointer-events-none absolute inset-0 z-0 min-h-[100dvh] w-full" aria-hidden="true">
+          <!-- 블랙 베이스 -->
+          <div class="absolute inset-0 bg-black"></div>
+          <!-- 풀사이즈 BG -->
+          <img
+            src="./assets/bg2.jpg"
+            alt=""
+            class="absolute inset-0 block h-full min-h-[100dvh] w-full object-cover object-center"
+          />
+          <!-- 전체 오버레이: 블랙 50% -->
+          <div class="absolute inset-0 bg-black/50"></div>
+          <!-- 중앙→외곽: 블랙 강도 약 50% → 0% (비네트). 가장자리는 배경 이미지가 더 드러남 -->
+          <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_120%_95%_at_50%_46%,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.35)_32%,rgba(0,0,0,0.18)_52%,rgba(0,0,0,0.06)_72%,rgba(0,0,0,0)_88%)]"
+          ></div>
+        </div>
+
+      <!-- Contact -->
+      <section id="contact" class="relative z-10 flex flex-1 flex-col justify-start snap-section-main pb-[calc(3rem+30px)] sm:pb-[calc(4rem+30px)]">
+        <div class="site-container w-full px-4 sm:px-6 lg:px-8 xl:px-10 3xl:px-12 reveal-up">
+          <div class="contact-on-bg">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+              <h2 class="tracking-tight">
+                <span class="hero-title-line block w-full">
+                  <span id="contact-form-title" class="hero-title-line__in block type-section-display text-white">문의하기</span>
+                </span>
+              </h2>
+            </div>
+            <p class="mt-2 max-w-md text-sm text-white/65 3xl:max-w-lg 3xl:text-base">
+              프로젝트·제휴 관련 문의를 남겨 주세요.
+            </p>
+
+            <form class="mt-6 space-y-7" method="post" action="#" onsubmit="return window.__handleContactSubmit(event)" aria-labelledby="contact-form-title" novalidate>
+                <div class="grid gap-7 sm:grid-cols-2 sm:gap-x-8">
+                  <label class="block" for="contact-company">
+                    <span class="mb-1.5 block text-sm font-medium text-white/85 3xl:text-base">
+                      회사명 <abbr title="필수 입력" class="font-semibold text-brand-300 no-underline">*</abbr>
+                    </span>
+                    <input
+                      id="contact-company"
+                      class="contact-field focus-ring"
+                      name="company"
+                      placeholder="법인명 또는 단체명"
+                      autocomplete="organization"
+                      required
+                    />
+                  </label>
+                  <label class="block" for="contact-name">
+                    <span class="mb-1.5 block text-sm font-medium text-white/85 3xl:text-base">
+                      담당자 <abbr title="필수 입력" class="font-semibold text-brand-300 no-underline">*</abbr>
+                    </span>
+                    <input
+                      id="contact-name"
+                      class="contact-field focus-ring"
+                      name="name"
+                      placeholder="성함"
+                      autocomplete="name"
+                      required
+                    />
+                  </label>
+                  <label class="block" for="contact-email">
+                    <span class="mb-1.5 block text-sm font-medium text-white/85 3xl:text-base">
+                      이메일 <abbr title="필수 입력" class="font-semibold text-brand-300 no-underline">*</abbr>
+                    </span>
+                    <input
+                      id="contact-email"
+                      class="contact-field focus-ring"
+                      name="email"
+                      type="email"
+                      placeholder="name@company.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </label>
+                  <label class="block" for="contact-phone">
+                    <span class="mb-1.5 block text-sm font-medium text-white/85 3xl:text-base">
+                      연락처 <span class="font-normal text-white/50">(선택)</span>
+                    </span>
+                    <input
+                      id="contact-phone"
+                      class="contact-field focus-ring"
+                      name="phone"
+                      placeholder="010-0000-0000"
+                      autocomplete="tel"
+                    />
+                  </label>
+                </div>
+                <label class="block" for="contact-message">
+                  <span class="mb-1.5 block text-sm font-medium text-white/85 3xl:text-base">
+                    문의 내용 <abbr title="필수 입력" class="font-semibold text-brand-300 no-underline">*</abbr>
+                  </span>
+                  <textarea
+                    id="contact-message"
+                    class="contact-field-textarea focus-ring w-full"
+                    name="message"
+                    rows="2"
+                    placeholder="프로젝트 개요, 일정, 문의 사항을 적어 주세요."
+                    autocomplete="off"
+                    required
+                  ></textarea>
+                </label>
+
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:pt-2">
+                  <p class="text-xs text-white/55">제출 시 개인정보 처리에 동의한 것으로 간주합니다.</p>
+                  <button
+                    type="submit"
+                    class="focus-ring inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black hover:bg-white/90 min-[720px]:px-12 3xl:px-14 3xl:py-3.5 3xl:text-base 4xl:px-16 4xl:py-4 4xl:text-xl"
+                  >
+                    문의 접수하기
+                  </button>
+                </div>
+
+                <div id="contact-toast" class="hidden text-sm text-brand-200" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="site-footer relative z-10 mt-auto shrink-0 border-t border-white/[0.07] bg-[#050508]"
+        role="contentinfo"
+      >
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+        <div class="site-container px-4 pt-12 pb-10 sm:px-6 sm:pt-14 lg:px-8 xl:px-10 3xl:px-12">
+          <div class="footer-main-row flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
+            <div class="max-w-sm shrink-0 sm:max-w-md xl:max-w-lg 3xl:max-w-xl">
+              <a
+                href="#hero"
+                class="group focus-ring inline-flex rounded-lg"
+                aria-label="WOONGJIN IT — 메인 화면으로 이동"
+              >
+                <img
+                  src="./assets/wjit_logo.svg"
+                  alt="WOONGJIN IT"
+                  width="1393"
+                  height="361"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-[1.4rem] w-auto max-w-[min(100%,208px)] object-contain object-left opacity-95 transition-opacity group-hover:opacity-100 sm:h-[1.6rem] 3xl:h-[1.85rem] 4xl:h-[2rem]"
+                />
+              </a>
+            </div>
+
+            <nav
+              class="grid flex-1 grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-5"
+              aria-label="사이트 하단 전체 메뉴"
+            >
+              <div>
+                <p class="footer-nav-heading">Business</p>
+                <ul class="mt-4 space-y-2.5">
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">AI</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">SOLUTION</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">ERP</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">CLOUD</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">MANAGED SERVICE</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="footer-nav-heading">Industry</p>
+                <ul class="mt-4 space-y-2.5">
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">렌탈</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">모빌리티</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">제조</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">바이오</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">소비재</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">물류</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">반도체</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="footer-nav-heading">자료실</p>
+                <ul class="mt-4 space-y-2.5">
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">프로젝트 사례</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">다운로드</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="footer-nav-heading">미디어룸</p>
+                <ul class="mt-4 space-y-2.5">
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">뉴스</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">이벤트</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">공지사항</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">블로그</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="footer-nav-heading">회사소개</p>
+                <ul class="mt-4 space-y-2.5">
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">기업소개</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">투자정보</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">해외법인</a>
+                  </li>
+                  <li>
+                    <a class="footer-nav-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">채용정보</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="footer-aside-col flex w-full flex-col lg:w-[11.5rem] lg:shrink-0">
+              <div id="footer-family-wrap" class="footer-family-dropdown relative pointer-events-auto">
+                <label class="sr-only" for="footer-family-trigger">Family Site</label>
+                <button
+                  type="button"
+                  id="footer-family-trigger"
+                  class="footer-family-trigger"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="footer-family-listbox"
+                >
+                  <span id="footer-family-trigger-label">Family Site</span>
+                  <svg class="footer-family-trigger__chev" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M7 10l5 5 5-5H7z" />
+                  </svg>
+                </button>
+                <ul id="footer-family-listbox" class="footer-family-panel" role="listbox" hidden aria-hidden="true">
+                  <li role="presentation">
+                    <span class="footer-family-option footer-family-option--muted pointer-events-none" tabindex="-1">Family Site</span>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">웅진그룹</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">웅진씽크빅</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">웅진프리드라이프</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">Woongjin INC</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">웅진플레이도시</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">렉스필드 컨트리클럽</button>
+                  </li>
+                  <li role="presentation">
+                    <button type="button" role="option" class="footer-family-option">웅진북센</button>
+                  </li>
+                </ul>
+              </div>
+              <nav class="contact-social-nav shrink-0" aria-label="웅진IT 채널 바로가기">
+                <ul class="flex flex-wrap items-center gap-2.5 sm:justify-end">
+                  <li>
+                    <a
+                      class="contact-social-btn focus-ring rounded-xl"
+                      href="#"
+                      data-empty-link
+                      aria-disabled="true"
+                      tabindex="-1"
+                      aria-label="ChatBOT · 고객 문의"
+                    >
+                      <iconify-icon icon="solar:chat-round-dots-bold" aria-hidden="true"></iconify-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="contact-social-btn focus-ring rounded-xl"
+                      href="#"
+                      data-empty-link
+                      aria-disabled="true"
+                      tabindex="-1"
+                      aria-label="페이스북 · 웅진그룹"
+                    >
+                      <iconify-icon icon="mdi:facebook" aria-hidden="true"></iconify-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="contact-social-btn focus-ring rounded-xl"
+                      href="#"
+                      data-empty-link
+                      aria-disabled="true"
+                      tabindex="-1"
+                      aria-label="블로그"
+                    >
+                      <iconify-icon icon="solar:document-text-linear" aria-hidden="true"></iconify-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="contact-social-btn focus-ring rounded-xl"
+                      href="#"
+                      data-empty-link
+                      aria-disabled="true"
+                      tabindex="-1"
+                      aria-label="유튜브"
+                    >
+                      <iconify-icon icon="mdi:youtube" aria-hidden="true"></iconify-icon>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="mt-12 border-t border-white/[0.08] pt-8">
+            <div class="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-x-8 lg:gap-y-3">
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
+                <a
+                  class="footer-meta-link focus-ring rounded-md font-medium text-white/55 hover:text-white/90"
+                  href="#"
+                  data-empty-link
+                  aria-disabled="true" tabindex="-1"
+                  >채용 바로가기</a
+                >
+                <span class="hidden text-white/20 sm:inline" aria-hidden="true">|</span>
+                <a class="footer-meta-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">문의하기</a>
+                <span class="hidden text-white/20 sm:inline" aria-hidden="true">|</span>
+                <a class="footer-meta-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">리뉴얼 사이트 문의 섹션</a>
+              </div>
+              <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs">
+                <a class="footer-meta-link focus-ring rounded-md font-medium text-white/60 hover:text-white/90" href="#" data-empty-link aria-disabled="true" tabindex="-1">개인정보 처리방침</a>
+                <a class="footer-meta-link focus-ring rounded-md" href="#" data-empty-link aria-disabled="true" tabindex="-1">이메일 무단수집 거부</a>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 flex flex-col gap-2 text-[11px] leading-snug text-white/55 md:flex-row md:flex-wrap md:items-baseline md:justify-between md:gap-x-6 md:gap-y-1"
+            >
+              <p class="min-w-0">
+                서울시 중구 청계천로 24 케이스퀘어시티 6~9, 16층 <span class="text-white/25" aria-hidden="true">·</span> 대표전화 02-0000-0000
+              </p>
+              <p class="text-pretty md:shrink-0 md:whitespace-nowrap">
+                Copyright © <span id="year"></span> Woongjin Co., Ltd. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      </section>
+    </main>
+
+
+    <button
+      type="button"
+      id="mobile-scroll-top"
+      class="mobile-scroll-top focus-ring"
+      aria-label="맨 위로"
+      hidden
+    >
+      <svg
+        class="mobile-scroll-top__icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 19V6M12 6l-5.5 5.5M12 6l5.5 5.5" />
+      </svg>
+    </button>
+
+    <nav id="mobile-bottom-dock" class="mobile-bottom-dock" aria-label="빠른 실행">
+      <a href="#contact" class="mobile-bottom-dock__link focus-ring">문의하기</a>
+      <a href="#cases" class="mobile-bottom-dock__link focus-ring">프로젝트사례</a>
+    </nav>
+
+    <script src="./js/site.js" defer></script>
