@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <title>웅진IT 디자인 리뉴얼 | 시안 보기</title>
+    <meta
+      name="description"
+      content="웅진IT 디자인 리뉴얼 — 인터렉티브 반응형 사이트 제작 시안 1·2·3 미리보기"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --white: #ffffff;
+        --ink: #111827;
+        --ink-sub: #374151;
+        --ink-muted: #6b7280;
+        --line: #e5e7eb;
+        --blue: #0066ff;
+        --blue-soft: #eff6ff;
+        --blue-line: #93c5fd;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100dvh;
+        font-family:
+          "Pretendard",
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Noto Sans KR",
+          sans-serif;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        width: min(1200px, 100%);
+        margin: 0 auto;
+        padding: clamp(1.5rem, 3.5vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem)
+          clamp(4rem, 8vw, 5rem);
+      }
+
+      /* ── Header ── */
+      .header {
+        margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      .header__logo {
+        display: block;
+        width: clamp(160px, 20vw, 200px);
+        height: auto;
+        margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+      }
+
+      .header__label {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+
+      .header__title {
+        font-size: clamp(2.5rem, 7vw, 3.75rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .header__desc {
+        font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+        font-weight: 400;
+        color: var(--ink-sub);
+        word-break: keep-all;
+      }
+
+      /* ── Cards ── */
+      .cards {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: clamp(1.75rem, 3vw, 2.25rem);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--white);
+        color: inherit;
+        transition:
+          border-color 0.25s var(--ease),
+          background 0.25s var(--ease);
+      }
+
+      .card:hover {
+        border-color: var(--blue-line);
+        background: var(--blue-soft);
+      }
+
+      .card__num {
+        display: block;
+        margin-bottom: 1.25rem;
+        font-size: clamp(2rem, 3vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        color: var(--blue);
+      }
+
+      .card__name {
+        font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.25;
+        margin-bottom: 0.5rem;
+      }
+
+      .card__type {
+        display: block;
+        margin-bottom: 1.25rem;
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        font-weight: 600;
+        color: var(--blue);
+      }
+
+      .card__desc {
+        flex: 1;
+        font-size: clamp(1rem, 1.4vw, 1.0625rem);
+        color: var(--ink-sub);
+        line-height: 1.75;
+        word-break: keep-all;
+        margin-bottom: 1.5rem;
+      }
+
+      .card__keywords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 0.75rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9375rem;
+        color: var(--ink-muted);
+      }
+
+      .card__keywords span::before {
+        content: "#";
+        color: var(--blue-line);
+      }
+
+      /* ── Viewport links ── */
+      .card__viewports {
+        margin-bottom: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .card:hover .card__viewports {
+        border-top-color: var(--blue-line);
+      }
+
+      .card__viewports-title {
+        display: block;
+        margin-bottom: 0.875rem;
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--ink-sub);
+      }
+
+      .card__viewport-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+      }
+
+      .card__viewport-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        font-size: clamp(1rem, 1.4vw, 1.0625rem);
+        font-weight: 600;
+        color: var(--ink-sub);
+        text-decoration: none;
+        transition:
+          border-color 0.2s var(--ease),
+          color 0.2s var(--ease),
+          background 0.2s var(--ease);
+      }
+
+      .card__viewport-link:hover,
+      .card__viewport-link:focus-visible {
+        border-color: var(--blue);
+        color: var(--blue);
+        background: var(--white);
+        outline: none;
+      }
+
+      .card__viewport-name {
+        flex-shrink: 0;
+      }
+
+      .card__viewport-size {
+        font-size: clamp(0.9375rem, 1.3vw, 1rem);
+        font-weight: 500;
+        color: var(--ink-muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .card__viewport-link:hover .card__viewport-size,
+      .card__viewport-link:focus-visible .card__viewport-size {
+        color: var(--blue);
+      }
+
+      .card__action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        margin-top: auto;
+        gap: 0.5rem;
+        padding: 0.875rem 1.375rem;
+        border-radius: 10px;
+        border: 1px solid var(--blue);
+        background: var(--blue);
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: var(--white);
+        text-decoration: none;
+        transition:
+          gap 0.25s var(--ease),
+          background 0.25s var(--ease);
+      }
+
+      .card__action:hover,
+      .card__action:focus-visible {
+        gap: 0.75rem;
+        background: #0052cc;
+        border-color: #0052cc;
+        outline: none;
+      }
+
+      .card__action svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* ── Footer ── */
+      .footer {
+        margin-top: clamp(3rem, 6vw, 4rem);
+        padding-top: 1.75rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.9375rem;
+        color: var(--ink-muted);
+      }
+
+      @media (max-width: 960px) {
+        .cards {
+          grid-template-columns: 1fr;
+          max-width: 560px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="시안1/assets/wjit_logo.svg"
+          alt="WOONGJIN IT"
+          width="200"
+          height="52"
+        />
+        <span class="header__label">Design Preview</span>
+        <h1 class="header__title">웅진IT 디자인 리뉴얼</h1>
+        <p class="header__desc">인터렉티브 반응형 사이즈 제작 : 메인시안</p>
+      </header>
+
+      <nav aria-label="시안 선택">
+        <ul class="cards">
+          <li>
+            <article class="card">
+              <span class="card__num">01</span>
+              <h2 class="card__name">시안 1</h2>
+              <span class="card__type">역동적 몰입형</span>
+              <p class="card__desc">
+                AI, 인프라, 데이터의 흐름을 담은 역동적인 영상과 풀스크린 화면
+                전환으로, 핵심 콘텐츠의 몰입도를 높인 시안.
+              </p>
+              <div class="card__keywords" aria-label="키워드">
+                <span>역동적비주얼</span>
+                <span>풀화면전환</span>
+                <span>콘텐츠집중</span>
+              </div>
+              <div class="card__viewports">
+                <span class="card__viewports-title">해상도별 보기</span>
+                <ul class="card__viewport-list">
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%881%2Findex.html&amp;w=390&amp;h=844&amp;label=%EB%AA%A8%EB%B0%94%EC%9D%BC"
+                    >
+                      <span class="card__viewport-name">모바일</span>
+                      <span class="card__viewport-size">390 × 844</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%881%2Findex.html&amp;w=820&amp;h=1180&amp;label=%ED%8C%A8%EB%93%9C"
+                    >
+                      <span class="card__viewport-name">패드</span>
+                      <span class="card__viewport-size">820 × 1180</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%881%2Findex.html&amp;w=1920&amp;h=1080&amp;label=%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91"
+                    >
+                      <span class="card__viewport-name">데스크탑</span>
+                      <span class="card__viewport-size">1920 × 1080</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%881%2Findex.html&amp;w=2560&amp;h=1440&amp;label=%EA%B3%A0%ED%95%B4%EC%83%81%EB%8F%84"
+                    >
+                      <span class="card__viewport-name">고해상도</span>
+                      <span class="card__viewport-size">2560 × 1440</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a
+                class="card__action"
+                href="시안1/index.html"
+              >
+                VIEW
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card">
+              <span class="card__num">02</span>
+              <h2 class="card__name">시안 2</h2>
+              <span class="card__type">트렌디 정보형</span>
+              <p class="card__desc">
+                트렌디한 마스크 리빌 인터랙션과 '변화하는 IT' 콘셉트의 메인
+                영상을 적용해 시선을 사로잡고, 다양한 뉴스와 정보를 한눈에
+                볼 수 있도록 구성한 시안.
+              </p>
+              <div class="card__keywords" aria-label="키워드">
+                <span>마스크리빌</span>
+                <span>IT콘셉트</span>
+                <span>정보집약적</span>
+              </div>
+              <div class="card__viewports">
+                <span class="card__viewports-title">해상도별 보기</span>
+                <ul class="card__viewport-list">
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%882%2Findex.html&amp;w=390&amp;h=844&amp;label=%EB%AA%A8%EB%B0%94%EC%9D%BC"
+                    >
+                      <span class="card__viewport-name">모바일</span>
+                      <span class="card__viewport-size">390 × 844</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%882%2Findex.html&amp;w=820&amp;h=1180&amp;label=%ED%8C%A8%EB%93%9C"
+                    >
+                      <span class="card__viewport-name">패드</span>
+                      <span class="card__viewport-size">820 × 1180</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%882%2Findex.html&amp;w=1920&amp;h=1080&amp;label=%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91"
+                    >
+                      <span class="card__viewport-name">데스크탑</span>
+                      <span class="card__viewport-size">1920 × 1080</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%882%2Findex.html&amp;w=2560&amp;h=1440&amp;label=%EA%B3%A0%ED%95%B4%EC%83%81%EB%8F%84"
+                    >
+                      <span class="card__viewport-name">고해상도</span>
+                      <span class="card__viewport-size">2560 × 1440</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a
+                class="card__action"
+                href="시안2/index.html"
+              >
+                VIEW
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card">
+              <span class="card__num">03</span>
+              <h2 class="card__name">시안 3</h2>
+              <span class="card__type">미니멀 심플형</span>
+              <p class="card__desc">
+                콘텐츠 구성 요소를 가장 절제된 인터랙션과 미니멀한 감성으로
+                정돈하여, 깔끔하고 직관적인 전개에 집중한 시안.
+              </p>
+              <div class="card__keywords" aria-label="키워드">
+                <span>미니멀리즘</span>
+                <span>직관적심플함</span>
+              </div>
+              <div class="card__viewports">
+                <span class="card__viewports-title">해상도별 보기</span>
+                <ul class="card__viewport-list">
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%883%2Findex.html&amp;w=390&amp;h=844&amp;label=%EB%AA%A8%EB%B0%94%EC%9D%BC"
+                    >
+                      <span class="card__viewport-name">모바일</span>
+                      <span class="card__viewport-size">390 × 844</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%883%2Findex.html&amp;w=820&amp;h=1180&amp;label=%ED%8C%A8%EB%93%9C"
+                    >
+                      <span class="card__viewport-name">패드</span>
+                      <span class="card__viewport-size">820 × 1180</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%883%2Findex.html&amp;w=1920&amp;h=1080&amp;label=%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91"
+                    >
+                      <span class="card__viewport-name">데스크탑</span>
+                      <span class="card__viewport-size">1920 × 1080</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="card__viewport-link"
+                      href="preview.html?src=%EC%8B%9C%EC%95%883%2Findex.html&amp;w=2560&amp;h=1440&amp;label=%EA%B3%A0%ED%95%B4%EC%83%81%EB%8F%84"
+                    >
+                      <span class="card__viewport-name">고해상도</span>
+                      <span class="card__viewport-size">2560 × 1440</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a
+                class="card__action"
+                href="시안3/index.html"
+              >
+                VIEW
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </nav>
+
+      <footer class="footer">
+        <p>© 2026 WOONGJIN IT · Design Renewal Preview</p>
+      </footer>
+    </main>
+  </body>
+</html>
